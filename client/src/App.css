@@ -1,0 +1,45 @@
+.app {
+  text-align: center;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.input-area {
+  width: 80%;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.send-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+}
+
+.response, .error-dashboard {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  color: #333;
+}
+
+.response {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+.error-dashboard {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+.error-dashboard h2 {
+  color: #721c24;
+}
