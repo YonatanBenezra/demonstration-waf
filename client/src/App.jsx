@@ -13,10 +13,9 @@ function App() {
 
   const sendRequest = async () => {
     try {
-      const res = await axios.post(
-        "https://example-waf.onrender.com/filter-request",
-        { content: requestContent }
-      );
+      const res = await axios.post("http://localhost:3000/filter-request", {
+        content: requestContent,
+      });
       setResponse(res.data);
       setErrorInfo(null);
     } catch (error) {
@@ -41,8 +40,7 @@ function App() {
       <button className="send-button" onClick={sendRequest}>
         Send Request
       </button>
-      {response && <div className="response">{response}</div>}
-      {console.log(errorInfo)}
+      {response && <div className="response">{response?.message}</div>}
       {errorInfo && (
         <div className="error-dashboard">
           <h2>Error Detected</h2>
