@@ -94,6 +94,7 @@ function detectMaliciousActivity(content, req) {
       type: "Conditional SQL Injection",
     },
     { pattern: /';\s*EXEC\s*\(.+\)/, type: "SQL Execution Command Injection" },
+    { pattern: /sudo/, type: "Sudo, that is not a good sign" },
   ];
 
   for (let { pattern, type } of sqlInjectionPatterns) {

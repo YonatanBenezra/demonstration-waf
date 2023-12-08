@@ -14,12 +14,11 @@ function App() {
   const sendRequest = async () => {
     try {
       // const res = await axios.post("http://localhost:3000/filter-request", {
-      const res = await axios.post(
-        "https://example-waf.onrender.com/filter-request",
-        {
-          content: requestContent,
-        }
-      );
+        const res = await axios.post(
+          "https://example-waf.onrender.com/filter-request",
+          {
+        content: requestContent,
+      });
       setResponse(res.data);
       setErrorInfo(null);
     } catch (error) {
